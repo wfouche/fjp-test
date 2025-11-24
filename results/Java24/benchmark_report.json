@@ -1,0 +1,18 @@
+{
+  "config": {"actions": {"description": "ForkJoinPoolTest", "output_filename": "benchmark_output.json", "report_filename": "benchmark_report.html", "user_class": "io.tulip.ForkJoinPoolUser", "user_params": {"debug": true}, "user_actions": {"1": "FJP:invoke"}}, "contexts": {"Context-1": {"enabled": true, "num_users": 1024, "num_threads": 4}}, "benchmarks": {"onStart": {"save_stats": false, "scenario_actions": [{"id": 0}]}, "FJP1": {"time": {"pre_warmup_duration": 30, "warmup_duration": 10, "benchmark_duration": 30, "benchmark_iterations": 5}, "aps_rate": 300000.0, "scenario_actions": [{"id": 1}]}, "onStop": {"save_stats": false, "scenario_actions": [{"id": 100}]}}},
+  "benchmarks": {
+    "FJP1": {
+      "context": {"num_users": 1024, "name": "Context-1", "num_threads": 4},      "results": {
+         "1": {"max_rtt": "2025-11-24T11:35:15", "p90_rt": 12871.0, "AQS": 6.183133569748883, "avg_aps": 299999.06666666665, "CPU_T": "0:03:31.7", "CPU": 705.8666666666667, "num_failed": 0, "MWT": 7483391.0, "num_actions": 8999972, "p99_rt": 25711.0, "MQS": 11, "duration": "0:00:30", "max_rt": 7206709.0, "min_rt": 320.0, "MEM": 59.21351909637451, "std_dev": 6936.109823934568, "avg_rt": 7924.485003731123, "AWT": 53089.68855125327}
+        ,"2": {"max_rtt": "2025-11-24T11:35:37", "p90_rt": 12919.0, "AQS": 6.1947688888888885, "avg_aps": 300000.0, "CPU_T": "0:03:32.4", "CPU": 708.2666666666667, "num_failed": 0, "MWT": 7786495.0, "num_actions": 9000000, "p99_rt": 25679.0, "MQS": 11, "duration": "0:00:30", "max_rt": 7607657.0, "min_rt": 471.0, "MEM": 41.85512065887451, "std_dev": 8564.632812898179, "avg_rt": 7959.951409555556, "AWT": 53493.146132444446}
+        ,"3": {"max_rtt": "2025-11-24T11:36:21", "p90_rt": 12927.0, "AQS": 6.184867913157218, "avg_aps": 299999.6, "CPU_T": "0:03:33.1", "CPU": 710.3666666666667, "num_failed": 0, "MWT": 9478143.0, "num_actions": 8999988, "p99_rt": 25679.0, "MQS": 11, "duration": "0:00:30", "max_rt": 9361046.0, "min_rt": 451.0, "MEM": 24.41527247428894, "std_dev": 8687.211308972153, "avg_rt": 7965.006244897216, "AWT": 53446.79446605929}
+        ,"4": {"max_rtt": "2025-11-24T11:37:06", "p90_rt": 12919.0, "AQS": 6.185377, "avg_aps": 300000.0, "CPU_T": "0:03:32.9", "CPU": 709.9, "num_failed": 0, "MWT": 22282239.0, "num_actions": 9000000, "p99_rt": 25647.0, "MQS": 11, "duration": "0:00:30", "max_rt": 22108046.0, "min_rt": 411.0, "MEM": 7.08509273827076, "std_dev": 15524.855395541443, "avg_rt": 7975.288867, "AWT": 53479.19173588889}
+        ,"5": {"max_rtt": "2025-11-24T11:37:18", "p90_rt": 12935.0, "AQS": 6.181003666666666, "avg_aps": 299999.93333333335, "CPU_T": "0:03:33.4", "CPU": 711.3333333333334, "num_failed": 0, "MWT": 1398783.0, "num_actions": 8999998, "p99_rt": 25599.0, "MQS": 11, "duration": "0:00:30", "max_rt": 1088252.0, "min_rt": 310.0, "MEM": 40.997979417443275, "std_dev": 5174.361565456932, "avg_rt": 7971.098660910813, "AWT": 53447.89604075468}
+      }
+      ,"actions": {
+         "1": {"max_rtt": "2025-11-24T11:37:06", "p90_rt": 12911, "avg_aps": 299999.72, "num_failed": 0, "num_actions": 44999958, "p99_rt": 25663, "duration": "0:02:30", "max_rt": 22108046.0, "min_rt": 310.0, "std_dev": 9640.821178972943, "avg_rt": 7959.166056710542}
+        ,"summary": {"aps_target_rate": 300000.0, "max_rtt": "2025-11-24T11:37:06", "p90_rt": 12911, "AQS": 6.1947688888888885, "avg_aps": 299999.72, "CPU_T": "0:17:43.7", "CPU": 711.3333333333334, "num_failed": 0, "MWT": 22282239.0, "num_actions": 44999958, "p99_rt": 25663, "MQS": 11, "duration": "0:02:30", "max_rt": 22108046.0, "min_rt": 310.0, "MEM": 59.21351909637451, "std_dev": 9640.821178972943, "min_aps": 299999.06666666665, "avg_rt": 7959.166056710542, "max_aps": 300000.0, "AWT": 53493.146132444446}
+      }
+    }
+  }
+}
