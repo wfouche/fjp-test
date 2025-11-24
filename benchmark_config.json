@@ -22,7 +22,7 @@
             "time": {
                 "pre_warmup_duration": 30,
                 "warmup_duration": 10,
-                "benchmark_duration": 30,
+                "benchmark_duration": 60,
                 "benchmark_iterations": 5
             },
             "scenario_actions": [
