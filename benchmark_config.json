@@ -18,12 +18,12 @@
         },
         "FJP1": {
             "enabled": true,
-            "aps_rate": 0.0,
+            "aps_rate": 300000.0,
             "time": {
                 "pre_warmup_duration": 30,
                 "warmup_duration": 10,
                 "benchmark_duration": 30,
-                "benchmark_iterations": 3
+                "benchmark_iterations": 5
             },
             "scenario_actions": [
                 {
