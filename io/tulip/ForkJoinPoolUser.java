@@ -58,7 +58,7 @@ public class ForkJoinPoolUser extends TulipUser {
     }
 
     public boolean onStop() {
-        // Initialize the shared ForkJoinPool object
+        // Shutdown the shared ForkJoinPool object
         if (getUserId() == 0) {
             logger.info("ForkJoinPoolUser.onStop");
             forkJoinPool.shutdown();
