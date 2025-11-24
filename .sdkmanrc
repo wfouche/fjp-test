@@ -1,0 +1,8 @@
+# Enable auto-env through the sdkman_auto_env config
+# Add key=value pairs of SDKs to use below
+
+# Java
+java=21.0.9-tem
+
+# JBang
+jbang=0.132.1
