@@ -20,7 +20,7 @@ public class ForkJoinPoolUser extends TulipUser {
     public static AtomicInteger[] results = new AtomicInteger[RESULTS_ARRAY_SIZE];
 
     // private data per user
-    DoubleNumber doubleNumberTask;
+    // DoubleNumber doubleNumberTask;
 
     public ForkJoinPoolUser(int userId, int threadId) {
         super(userId, threadId);
@@ -32,7 +32,7 @@ public class ForkJoinPoolUser extends TulipUser {
             logger.info("ForkJoinPoolUser.onStart");
             forkJoinPool = new ForkJoinPool();
         }
-        doubleNumberTask = new DoubleNumber(array, 0, array.length, getUserId());
+        // doubleNumberTask = new DoubleNumber(array, 0, array.length, getUserId());
         return true;
     }
 
@@ -44,7 +44,7 @@ public class ForkJoinPoolUser extends TulipUser {
         results[idx].set(0);
 
         // Create a task representing the entire work.
-        // DoubleNumber doubleNumberTask = new DoubleNumber(array, 0, array.length, idx);
+        DoubleNumber doubleNumberTask = new DoubleNumber(array, 0, array.length, idx);
 
         // Invoke the task in the ForkJoinPool. This method blocks until the task completes.
         forkJoinPool.invoke(doubleNumberTask);
