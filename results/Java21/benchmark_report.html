@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+table, th, td {
+  border:1px solid black; font-size:16px; text-align: center;
+}
+th:nth-child(n+14) {
+    background-color: #E5E4E2;
+}
+td:nth-child(n+14) {
+    background-color: #E5E4E2;
+}
+</style>
+
+<body>
+
+<h2><a href="https://wfouche.github.io/Tulip-docs">Tulip 2.1.13</a> / <a href='benchmark_config.html'>ForkJoinPoolTest21</a> / 2025-11-24_08:55</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Benchmark</th>
+    <th>Run Id</th>
+    <th>#N</th>
+    <th>#F</th>
+    <th>Duration</th>
+    <th>Aps</th>
+    <th>Avg_Rt</th>
+    <th>Std_Dev</th>
+    <th>Min_Rt</th>
+    <th>p90_Rt</th>
+    <th>p99_Rt</th>
+    <th>Max_Rt</th>
+    <th>Max_Rtt</th>
+    <th>AQS</th>
+    <th>MQS</th>
+    <th>AWT</th>
+    <th>MWT</th>
+    <th>CPU_T</th>
+    <th>CPU</th>
+    <th>MEM</th>
+  </tr>
+
+  <tr>
+    <td><a href='benchmark_config.html#_fjp1'>FJP1</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>u:1024, t:4</td>
+    <td>1</td>
+    <td>9000000</td>
+    <td>0</td>
+    <td>0:00:30</td>
+    <td>300000.0</td>
+    <td>7.9 us</td>
+    <td>5.3 us</td>
+    <td>341.0 ns</td>
+    <td>12.8 us</td>
+    <td>24.6 us</td>
+    <td>2.8 ms</td>
+    <td>24_08:55:39</td>
+    <td>6.2</td>
+    <td>11</td>
+    <td>53.4 us</td>
+    <td>4.2 ms</td>
+    <td>0:03:20.7</td>
+    <td>669.2</td>
+    <td>51.7</td>
+  </tr>
+
+  <tr>
+    <td>c:0</td>
+    <td>2</td>
+    <td>8999872</td>
+    <td>0</td>
+    <td>0:00:30</td>
+    <td>299995.7</td>
+    <td>7.9 us</td>
+    <td>5.6 us</td>
+    <td>381.0 ns</td>
+    <td>12.8 us</td>
+    <td>24.5 us</td>
+    <td>4.0 ms</td>
+    <td>24_08:55:41</td>
+    <td>6.2</td>
+    <td>11</td>
+    <td>53.4 us</td>
+    <td>4.0 ms</td>
+    <td>0:03:20.8</td>
+    <td>669.6</td>
+    <td>26.9</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>3</td>
+    <td>9000000</td>
+    <td>0</td>
+    <td>0:00:30</td>
+    <td>300000.0</td>
+    <td>7.9 us</td>
+    <td>5.3 us</td>
+    <td>370.0 ns</td>
+    <td>12.8 us</td>
+    <td>24.6 us</td>
+    <td>1.7 ms</td>
+    <td>24_08:56:29</td>
+    <td>6.2</td>
+    <td>11</td>
+    <td>53.5 us</td>
+    <td>1.9 ms</td>
+    <td>0:03:21.0</td>
+    <td>670.3</td>
+    <td>61.1</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>4</td>
+    <td>8999998</td>
+    <td>0</td>
+    <td>0:00:30</td>
+    <td>299999.9</td>
+    <td>8.0 us</td>
+    <td>6.7 us</td>
+    <td>421.0 ns</td>
+    <td>12.8 us</td>
+    <td>24.6 us</td>
+    <td>5.8 ms</td>
+    <td>24_08:57:04</td>
+    <td>6.2</td>
+    <td>11</td>
+    <td>53.5 us</td>
+    <td>5.9 ms</td>
+    <td>0:03:21.4</td>
+    <td>671.5</td>
+    <td>36.2</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>5</td>
+    <td>8999999</td>
+    <td>0</td>
+    <td>0:00:30</td>
+    <td>300000.0</td>
+    <td>8.0 us</td>
+    <td>5.3 us</td>
+    <td>370.0 ns</td>
+    <td>12.9 us</td>
+    <td>24.6 us</td>
+    <td>2.0 ms</td>
+    <td>24_08:57:12</td>
+    <td>6.2</td>
+    <td>11</td>
+    <td>53.6 us</td>
+    <td>2.1 ms</td>
+    <td>0:03:22.3</td>
+    <td>674.3</td>
+    <td>9.6</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td><a href='benchmark_report/benchmark_report_1_0.html'>[1.FJP:invoke]</a></td>
+    <td><b>44999869</b></td>
+    <td><b>0</b></td>
+    <td><b>0:02:30</b></td>
+    <td><b>299999.1</b></td>
+    <td><b>8.0 us</b></td>
+    <td><b>5.7 us</b></td>
+    <td><b>341.0 ns</b></td>
+    <td><b>12.8 us</b></td>
+    <td><b>24.6 us</b></td>
+    <td><b>5.8 ms</b></td>
+    <td><b>24_08:57:04</b></td>
+    <td><b>6.2</b></td>
+    <td><b>11</b></td>
+    <td><b>53.6 us</b></td>
+    <td><b>5.9 ms</b></td>
+    <td><b>0:16:46.4</b></td>
+    <td><b>674.3</b></td>
+    <td><b>61.1</b></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td><a href='benchmark_report/benchmark_report_1.html'>[Summary]</a></td>
+    <td><b>44999869</b></td>
+    <td><b>0</b></td>
+    <td><b>0:02:30</b></td>
+    <td><b>299999.1</b></td>
+    <td><b>8.0 us</b></td>
+    <td><b>5.7 us</b></td>
+    <td><b>341.0 ns</b></td>
+    <td><b>12.8 us</b></td>
+    <td><b>24.6 us</b></td>
+    <td><b>5.8 ms</b></td>
+    <td><b>24_08:57:04</b></td>
+    <td><b>6.2</b></td>
+    <td><b>11</b></td>
+    <td><b>53.6 us</b></td>
+    <td><b>5.9 ms</b></td>
+    <td><b>0:16:46.4</b></td>
+    <td><b>674.3</b></td>
+    <td><b>61.1</b></td>
+  </tr>
+
+</table>
+</body>
+</html>
