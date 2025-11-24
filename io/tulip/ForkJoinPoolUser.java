@@ -11,12 +11,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ForkJoinPoolUser extends TulipUser {
 
+    // shared data among all users
     public static int[] array = {1, 5, 10, 15, 20, 25, 50};
 
     public static ForkJoinPool forkJoinPool;
 
     public static int RESULTS_ARRAY_SIZE = 1024;
     public static AtomicInteger[] results = new AtomicInteger[RESULTS_ARRAY_SIZE];
+
+    // private data per user
+    DoubleNumber doubleNumberTask;
 
     public ForkJoinPoolUser(int userId, int threadId) {
         super(userId, threadId);
@@ -28,6 +32,7 @@ public class ForkJoinPoolUser extends TulipUser {
             logger.info("ForkJoinPoolUser.onStart");
             forkJoinPool = new ForkJoinPool();
         }
+        doubleNumberTask = new DoubleNumber(array, 0, array.length, getUserId());
         return true;
     }
 
@@ -39,7 +44,7 @@ public class ForkJoinPoolUser extends TulipUser {
         results[idx].set(0);
 
         // Create a task representing the entire work.
-        DoubleNumber doubleNumberTask = new DoubleNumber(array, 0, array.length, idx);
+        // DoubleNumber doubleNumberTask = new DoubleNumber(array, 0, array.length, idx);
 
         // Invoke the task in the ForkJoinPool. This method blocks until the task completes.
         forkJoinPool.invoke(doubleNumberTask);
@@ -49,7 +54,6 @@ public class ForkJoinPoolUser extends TulipUser {
         if (results[idx].intValue() != 252) {
             return false;
         }
-
         return true;
     }
 
