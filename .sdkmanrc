@@ -2,7 +2,11 @@
 # Add key=value pairs of SDKs to use below
 
 # Java
+#ava=8.0.472-tem
+#ava=11.0.29-tem
+#ava=17.0.17-tem
 java=21.0.9-tem
+#ava=25.0.1-tem
 
 # JBang
 jbang=0.132.1
