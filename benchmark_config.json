@@ -16,13 +16,13 @@
             "save_stats": false,
             "scenario_actions": [ {"id": 0} ]
         },
-        "FJP1": {
+        "FJP.a": {
             "enabled": true,
             "aps_rate": 300000.0,
             "time": {
                 "pre_warmup_duration": 30,
                 "warmup_duration": 10,
-                "benchmark_duration": 60,
+                "benchmark_duration": 30,
                 "benchmark_iterations": 5
             },
             "scenario_actions": [
@@ -31,6 +31,21 @@
                 }
             ]
         },
+      "FJP.b": {
+        "enabled": true,
+        "aps_rate": 0.0,
+        "time": {
+          "pre_warmup_duration": 30,
+          "warmup_duration": 10,
+          "benchmark_duration": 30,
+          "benchmark_iterations": 5
+        },
+        "scenario_actions": [
+          {
+            "id": 1
+          }
+        ]
+      },
         "onStop": {
             "save_stats": false,
             "scenario_actions": [ {"id": 100} ]
@@ -38,9 +53,28 @@
     },
     "contexts": {
         "Context-1": {
-            "enabled": true,
-            "num_users": 1024,
-            "num_threads": 4
+          "enabled": true,
+          "num_users": 1024,
+          "num_threads": 4,
+          "user_params": {
+            "id": 0
+          }
+        },
+        "Context-2": {
+          "enabled": true,
+          "num_users": 1024,
+          "num_threads": 4,
+          "user_params": {
+            "id": 1
+          }
+        },
+      "Context-3": {
+        "enabled": true,
+        "num_users": 1024,
+        "num_threads": 4,
+        "user_params": {
+          "id": 1
         }
-    }
+      }
+      }
 }

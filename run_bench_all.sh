@@ -1,0 +1,5 @@
+./run_bench_17.sh
+./run_bench_21.sh
+./run_bench_23.sh
+./run_bench_24.sh
+./run_bench_25.sh
