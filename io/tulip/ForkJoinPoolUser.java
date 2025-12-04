@@ -12,8 +12,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ForkJoinPoolUser extends TulipUser {
 
     // shared data among all users
-    public static int[] array = {1, 5, 10, 15, 20, 25, 50};
-
+    public static int[] array0 = {1, 5, 10, 15, 20, 25, 50};
+    public static int[] array1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100};
+    public static int[] array = null;
+    public static int arraySum;
+    
     public static ForkJoinPool forkJoinPool;
 
     public static int RESULTS_ARRAY_SIZE = 1024;
@@ -29,7 +32,17 @@ public class ForkJoinPoolUser extends TulipUser {
     public boolean onStart() {
         // Initialize the shared ForkJoinPool object
         if (getUserId() == 0) {
-            logger.info("ForkJoinPoolUser.onStart");
+            int id = Integer.parseInt(getUserParamValue("id"));
+            logger().info("ForkJoinPoolUser.onStart: " + id);
+            if (id == 0) {
+                array = array0;
+                arraySum = 252;
+                DoubleNumber.PROCESS_THRESHOLD = 2;
+            } else if (id == 1) {
+                array = array1;
+                arraySum = 10100;
+                DoubleNumber.PROCESS_THRESHOLD = 50;
+            }
             forkJoinPool = new ForkJoinPool();
         }
         // doubleNumberTask = new DoubleNumber(array, 0, array.length, getUserId());
@@ -51,7 +64,10 @@ public class ForkJoinPoolUser extends TulipUser {
 
         // Print the final accumulated result.
         // System.out.println("[" + idx + "] Final result after doubling and summing: " + results[idx]);
-        if (results[idx].intValue() != 252) {
+        if (results[idx].intValue() != arraySum) {
+            if (idx == 0) {
+                logger().info("" + results[idx].intValue());
+            }
             return false;
         }
         return true;
@@ -86,7 +102,7 @@ class DoubleNumber extends RecursiveAction {
 
     // Threshold for processing directly instead of forking.
     // If the sub-array size is less than or equal to this, process directly.
-    private static final int PROCESS_THRESHOLD = 2;
+    public static int PROCESS_THRESHOLD = -1;
 
     private int[] array;
     private int startIndex, endIndex;
@@ -107,7 +123,7 @@ class DoubleNumber extends RecursiveAction {
                 // Accumulate the doubled value.
                 // Note: In a true concurrent scenario with shared 'result',
                 // synchronization or atomic operations would be needed.
-                ForkJoinPoolUser.results[arrayOffset].addAndGet(array[i] * 2);
+                ForkJoinPoolUser.results[arrayOffset].addAndGet(array[i]*2);
             }
         } else {
             // Otherwise, split the task into two subtasks.
