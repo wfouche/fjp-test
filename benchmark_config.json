@@ -23,7 +23,7 @@
                 "pre_warmup_duration": 30,
                 "warmup_duration": 10,
                 "benchmark_duration": 30,
-                "benchmark_iterations": 5
+                "benchmark_iterations": 3
             },
             "scenario_actions": [
                 {
@@ -38,7 +38,7 @@
           "pre_warmup_duration": 30,
           "warmup_duration": 10,
           "benchmark_duration": 30,
-          "benchmark_iterations": 5
+          "benchmark_iterations": 3
         },
         "scenario_actions": [
           {
@@ -67,14 +67,6 @@
           "user_params": {
             "id": 1
           }
-        },
-      "Context-3": {
-        "enabled": true,
-        "num_users": 1024,
-        "num_threads": 4,
-        "user_params": {
-          "id": 1
         }
-      }
       }
 }

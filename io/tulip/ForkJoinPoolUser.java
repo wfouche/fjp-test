@@ -36,11 +36,11 @@ public class ForkJoinPoolUser extends TulipUser {
             logger().info("ForkJoinPoolUser.onStart: " + id);
             if (id == 0) {
                 array = array0;
-                arraySum = 126;
+                arraySum = 252;
                 DoubleNumber.PROCESS_THRESHOLD = 2;
             } else if (id == 1) {
                 array = array1;
-                arraySum = 5050;
+                arraySum = 10100;
                 DoubleNumber.PROCESS_THRESHOLD = 50;
             }
             forkJoinPool = new ForkJoinPool();
@@ -123,7 +123,7 @@ class DoubleNumber extends RecursiveAction {
                 // Accumulate the doubled value.
                 // Note: In a true concurrent scenario with shared 'result',
                 // synchronization or atomic operations would be needed.
-                ForkJoinPoolUser.results[arrayOffset].addAndGet(array[i]);
+                ForkJoinPoolUser.results[arrayOffset].addAndGet(array[i]*2);
             }
         } else {
             // Otherwise, split the task into two subtasks.
