@@ -5,9 +5,7 @@
 //DEPS ch.qos.logback:logback-classic:1.5.22
 //SOURCES ForkJoinPoolUser.java
 //JAVA 21+
-//PREVIEW
-//RUNTIME_OPTIONS -server -Xms2g -Xmx2g -XX:+UseZGC -XX:+ZGenerational
-//COMPILE_OPTIONS -g
+//RUNTIME_OPTIONS -Xms2g -Xmx2g -XX:+UseZGC -XX:+ZGenerational
 //FILES ../../benchmark_config.json
 //FILES ../../logback.xml
 
