@@ -1,6 +1,6 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //SOURCES App.java ForkJoinPoolUser.java
-//JAVA 25
+//JAVA 26
 
 package io.tulip;
 

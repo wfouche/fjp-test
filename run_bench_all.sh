@@ -3,3 +3,4 @@
 ./run_bench_23.sh
 ./run_bench_24.sh
 ./run_bench_25.sh
+./run_bench_26.sh
