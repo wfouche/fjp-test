@@ -6,7 +6,7 @@ package io.tulip;
 
 import io.github.wfouche.tulip.api.TulipApi;
 
-public class AppJava25 {
+public class AppJava26 {
    public static void main(String[] args) {
       TulipApi.runTulip("benchmark_config.json");
    }
