@@ -8,4 +8,4 @@ lynx -dump -width 205 benchmark_report.html
 #jbang run asciidoctorj@asciidoctor benchmark_config.adoc
 #jbang export fatjar io/tulip/App.java
 
-cp -R benchmark_report* ./results/Java24
+cp -R benchmark_* ./results/Java24
