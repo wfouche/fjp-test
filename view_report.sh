@@ -1,1 +1,1 @@
-firefox benchmark_report.html
+firefox index.html
