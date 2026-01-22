@@ -120,9 +120,9 @@ Filename::
 | 
 [%noheader,cols="2a,1a"]
 !===
-! *pre_warmup_duration*
+! *warmup_duration1*
 ! 30 seconds
-! *warmup_duration*
+! *warmup_duration2*
 ! 10 seconds
 ! *benchmark_duration*
 ! 30 seconds
@@ -151,9 +151,9 @@ Filename::
 | 
 [%noheader,cols="2a,1a"]
 !===
-! *pre_warmup_duration*
+! *warmup_duration1*
 ! 30 seconds
-! *warmup_duration*
+! *warmup_duration2*
 ! 10 seconds
 ! *benchmark_duration*
 ! 30 seconds
@@ -210,8 +210,8 @@ Filename::
             "enabled": true, 
             "aps_rate": 300000.0, 
             "time": {
-                "pre_warmup_duration": 30, 
-                "warmup_duration": 10, 
+                "warmup_duration1": 30, 
+                "warmup_duration2": 10, 
                 "benchmark_duration": 30, 
                 "benchmark_iterations": 3
             }, 
@@ -225,8 +225,8 @@ Filename::
             "enabled": true, 
             "aps_rate": 0.0, 
             "time": {
-                "pre_warmup_duration": 30, 
-                "warmup_duration": 10, 
+                "warmup_duration1": 30, 
+                "warmup_duration2": 10, 
                 "benchmark_duration": 30, 
                 "benchmark_iterations": 3
             }, 

@@ -5,40 +5,48 @@
 table, th, td {
   border:1px solid black; font-size:16px; text-align: center;
 }
-th:nth-child(n+14) {
-    background-color: #E5E4E2;
+
+/* Logic: Hide the last 8 columns by default */
+.extra-col {
+    display: none;
+    background-color: #E5E4E2; /* Subtle tint for expanded columns */
 }
-td:nth-child(n+14) {
-    background-color: #E5E4E2;
+
+/* Logic: Show them when the 'expanded' class is present */
+table.expanded .extra-col {
+    display: table-cell;
 }
 </style>
 
 <body>
 
-<h2><a href="https://wfouche.github.io/Tulip-docs">Tulip 2.1.15</a> / <a href='benchmark_config.html'>ForkJoinPoolTest</a> / 2025-12-29_18:26</h2>
+<h2><a href="https://wfouche.github.io/Tulip-docs">Tulip 2.1.16</a> / <a href='benchmark_config.html'>ForkJoinPoolTest</a> / 2026-01-22_06:30</h2>
 
-<table style="width:100%">
+<button id="toggleBtn">Show All Columns</button>
+
+<table style="width:100%" id="dataTable">
   <tr>
     <th>Benchmark</th>
     <th>Run Id</th>
     <th>#N</th>
     <th>#F</th>
-    <th>Duration</th>
+    <th>Time</th>
     <th>Aps</th>
     <th>Avg_Rt</th>
     <th>Std_Dev</th>
     <th>Min_Rt</th>
-    <th>p90_Rt</th>
+    <th>p50_Rt</th>
+    <th>p95_Rt</th>
     <th>p99_Rt</th>
     <th>Max_Rt</th>
-    <th>Max_Rtt</th>
-    <th>AQS</th>
-    <th>MQS</th>
-    <th>AWT</th>
-    <th>MWT</th>
-    <th>CPU_T</th>
-    <th>CPU</th>
-    <th>MEM</th>
+    <th class="extra-col">Max_Rtt</th>
+    <th class="extra-col">AQS</th>
+    <th class="extra-col">MQS</th>
+    <th class="extra-col">AWT</th>
+    <th class="extra-col">MWT</th>
+    <th class="extra-col">CPU_T</th>
+    <th class="extra-col">CPU</th>
+    <th class="extra-col">MEM</th>
   </tr>
 
   <tr>
@@ -55,13 +63,14 @@ td:nth-child(n+14) {
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
   </tr>
 
   <tr>
@@ -71,20 +80,21 @@ td:nth-child(n+14) {
     <td>0</td>
     <td>0:00:30</td>
     <td>300000.0</td>
-    <td>9.1 us</td>
+    <td>8.7 us</td>
     <td>6.5 us</td>
-    <td>381.0 ns</td>
-    <td>13.9 us</td>
-    <td>23.2 us</td>
-    <td>5.5 ms</td>
-    <td>29_18:25:50</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>60.9 us</td>
-    <td>5.6 ms</td>
-    <td>0:03:49.4</td>
-    <td>764.8</td>
-    <td>17.0</td>
+    <td>311.0 ns</td>
+    <td>7.9 us</td>
+    <td>15.8 us</td>
+    <td>22.2 us</td>
+    <td>5.4 ms</td>
+    <td class="extra-col">22_06:30:07</td>
+    <td class="extra-col">6.3</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">59.0 us</td>
+    <td class="extra-col">5.5 ms</td>
+    <td class="extra-col">0:03:39.9</td>
+    <td class="extra-col">733.3</td>
+    <td class="extra-col">7.1</td>
   </tr>
 
   <tr>
@@ -94,20 +104,21 @@ td:nth-child(n+14) {
     <td>0</td>
     <td>0:00:30</td>
     <td>300000.0</td>
-    <td>9.1 us</td>
-    <td>6.6 us</td>
-    <td>371.0 ns</td>
-    <td>13.9 us</td>
-    <td>23.2 us</td>
-    <td>5.8 ms</td>
-    <td>29_18:26:31</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>61.1 us</td>
-    <td>6.0 ms</td>
-    <td>0:03:49.7</td>
-    <td>765.7</td>
-    <td>50.2</td>
+    <td>8.7 us</td>
+    <td>6.2 us</td>
+    <td>351.0 ns</td>
+    <td>8.0 us</td>
+    <td>15.8 us</td>
+    <td>22.3 us</td>
+    <td>6.4 ms</td>
+    <td class="extra-col">22_06:30:31</td>
+    <td class="extra-col">6.3</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">59.1 us</td>
+    <td class="extra-col">6.5 ms</td>
+    <td class="extra-col">0:03:40.5</td>
+    <td class="extra-col">735.3</td>
+    <td class="extra-col">40.7</td>
   </tr>
 
   <tr>
@@ -117,20 +128,21 @@ td:nth-child(n+14) {
     <td>0</td>
     <td>0:00:30</td>
     <td>300000.0</td>
-    <td>9.1 us</td>
-    <td>7.2 us</td>
-    <td>371.0 ns</td>
-    <td>13.9 us</td>
-    <td>23.2 us</td>
-    <td>6.0 ms</td>
-    <td>29_18:27:01</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>61.1 us</td>
-    <td>6.1 ms</td>
-    <td>0:03:49.8</td>
-    <td>766.0</td>
-    <td>23.5</td>
+    <td>8.8 us</td>
+    <td>5.2 us</td>
+    <td>370.0 ns</td>
+    <td>8.0 us</td>
+    <td>15.9 us</td>
+    <td>22.3 us</td>
+    <td>4.0 ms</td>
+    <td class="extra-col">22_06:30:50</td>
+    <td class="extra-col">6.3</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">59.3 us</td>
+    <td class="extra-col">4.1 ms</td>
+    <td class="extra-col">0:03:41.1</td>
+    <td class="extra-col">737.3</td>
+    <td class="extra-col">14.6</td>
   </tr>
 
   <tr>
@@ -140,20 +152,21 @@ td:nth-child(n+14) {
     <td><b>0</b></td>
     <td><b>0:01:30</b></td>
     <td><b>300000.0</b></td>
-    <td><b>9.1 us</b></td>
-    <td><b>6.8 us</b></td>
-    <td><b>371.0 ns</b></td>
-    <td><b>13.9 us</b></td>
-    <td><b>23.2 us</b></td>
-    <td><b>6.0 ms</b></td>
-    <td><b>29_18:27:01</b></td>
-    <td><b>6.2</b></td>
-    <td><b>11</b></td>
-    <td><b>61.1 us</b></td>
-    <td><b>6.1 ms</b></td>
-    <td><b>0:11:28.9</b></td>
-    <td><b>766.0</b></td>
-    <td><b>50.2</b></td>
+    <td><b>8.7 us</b></td>
+    <td><b>6.0 us</b></td>
+    <td><b>311.0 ns</b></td>
+    <td><b>8.0 us</b></td>
+    <td><b>15.8 us</b></td>
+    <td><b>22.2 us</b></td>
+    <td><b>6.4 ms</b></td>
+    <td class="extra-col"><b>22_06:30:31</b></td>
+    <td class="extra-col"><b>6.3</b></td>
+    <td class="extra-col"><b>11</b></td>
+    <td class="extra-col"><b>59.3 us</b></td>
+    <td class="extra-col"><b>6.5 ms</b></td>
+    <td class="extra-col"><b>0:11:01.7</b></td>
+    <td class="extra-col"><b>737.3</b></td>
+    <td class="extra-col"><b>40.7</b></td>
   </tr>
 
   <tr>
@@ -163,20 +176,21 @@ td:nth-child(n+14) {
     <td><b>0</b></td>
     <td><b>0:01:30</b></td>
     <td><b>300000.0</b></td>
-    <td><b>9.1 us</b></td>
-    <td><b>6.8 us</b></td>
-    <td><b>371.0 ns</b></td>
-    <td><b>13.9 us</b></td>
-    <td><b>23.2 us</b></td>
-    <td><b>6.0 ms</b></td>
-    <td><b>29_18:27:01</b></td>
-    <td><b>6.2</b></td>
-    <td><b>11</b></td>
-    <td><b>61.1 us</b></td>
-    <td><b>6.1 ms</b></td>
-    <td><b>0:11:28.9</b></td>
-    <td><b>766.0</b></td>
-    <td><b>50.2</b></td>
+    <td><b>8.7 us</b></td>
+    <td><b>6.0 us</b></td>
+    <td><b>311.0 ns</b></td>
+    <td><b>8.0 us</b></td>
+    <td><b>15.8 us</b></td>
+    <td><b>22.2 us</b></td>
+    <td><b>6.4 ms</b></td>
+    <td class="extra-col"><b>22_06:30:31</b></td>
+    <td class="extra-col"><b>6.3</b></td>
+    <td class="extra-col"><b>11</b></td>
+    <td class="extra-col"><b>59.3 us</b></td>
+    <td class="extra-col"><b>6.5 ms</b></td>
+    <td class="extra-col"><b>0:11:01.7</b></td>
+    <td class="extra-col"><b>737.3</b></td>
+    <td class="extra-col"><b>40.7</b></td>
   </tr>
 
   <tr>
@@ -193,13 +207,14 @@ td:nth-child(n+14) {
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
   </tr>
 
   <tr>
@@ -207,22 +222,23 @@ td:nth-child(n+14) {
     <th>Run Id</th>
     <th>#N</th>
     <th>#F</th>
-    <th>Duration</th>
+    <th>Time</th>
     <th>Aps</th>
     <th>Avg_Rt</th>
     <th>Std_Dev</th>
     <th>Min_Rt</th>
-    <th>p90_Rt</th>
+    <th>p50_Rt</th>
+    <th>p95_Rt</th>
     <th>p99_Rt</th>
     <th>Max_Rt</th>
-    <th>Max_Rtt</th>
-    <th>AQS</th>
-    <th>MQS</th>
-    <th>AWT</th>
-    <th>MWT</th>
-    <th>CPU_T</th>
-    <th>CPU</th>
-    <th>MEM</th>
+    <th class="extra-col">Max_Rtt</th>
+    <th class="extra-col">AQS</th>
+    <th class="extra-col">MQS</th>
+    <th class="extra-col">AWT</th>
+    <th class="extra-col">MWT</th>
+    <th class="extra-col">CPU_T</th>
+    <th class="extra-col">CPU</th>
+    <th class="extra-col">MEM</th>
   </tr>
 
   <tr>
@@ -239,128 +255,134 @@ td:nth-child(n+14) {
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
   </tr>
 
   <tr>
     <td>u:1024, t:4</td>
     <td>1</td>
-    <td>10398312</td>
+    <td>10766774</td>
     <td>0</td>
     <td>0:00:30</td>
-    <td>346610.4</td>
-    <td>9.2 us</td>
-    <td>5.2 us</td>
-    <td>401.0 ns</td>
-    <td>13.9 us</td>
-    <td>22.8 us</td>
-    <td>3.2 ms</td>
-    <td>29_18:28:17</td>
-    <td>6.3</td>
-    <td>11</td>
-    <td>63.5 us</td>
-    <td>4.2 ms</td>
-    <td>0:04:24.7</td>
-    <td>882.6</td>
-    <td>19.3</td>
+    <td>358892.3</td>
+    <td>8.8 us</td>
+    <td>6.5 us</td>
+    <td>371.0 ns</td>
+    <td>8.1 us</td>
+    <td>15.8 us</td>
+    <td>21.9 us</td>
+    <td>6.4 ms</td>
+    <td class="extra-col">22_06:32:13</td>
+    <td class="extra-col">6.3</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">61.3 us</td>
+    <td class="extra-col">6.5 ms</td>
+    <td class="extra-col">0:04:24.4</td>
+    <td class="extra-col">881.4</td>
+    <td class="extra-col">26.2</td>
   </tr>
 
   <tr>
     <td>c:0</td>
     <td>2</td>
-    <td>10402627</td>
+    <td>10770820</td>
     <td>0</td>
     <td>0:00:30</td>
-    <td>346754.2</td>
-    <td>9.2 us</td>
-    <td>6.7 us</td>
-    <td>401.0 ns</td>
-    <td>13.9 us</td>
-    <td>22.8 us</td>
-    <td>6.7 ms</td>
-    <td>29_18:28:37</td>
-    <td>6.3</td>
-    <td>11</td>
-    <td>63.5 us</td>
-    <td>6.8 ms</td>
-    <td>0:04:24.9</td>
-    <td>883.2</td>
-    <td>17.5</td>
+    <td>359027.3</td>
+    <td>8.8 us</td>
+    <td>5.3 us</td>
+    <td>380.0 ns</td>
+    <td>8.1 us</td>
+    <td>15.9 us</td>
+    <td>21.9 us</td>
+    <td>4.0 ms</td>
+    <td class="extra-col">22_06:32:49</td>
+    <td class="extra-col">6.3</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">61.4 us</td>
+    <td class="extra-col">4.2 ms</td>
+    <td class="extra-col">0:04:24.4</td>
+    <td class="extra-col">881.4</td>
+    <td class="extra-col">30.5</td>
   </tr>
 
   <tr>
     <td></td>
     <td>3</td>
-    <td>10416834</td>
+    <td>10745480</td>
     <td>0</td>
     <td>0:00:30</td>
-    <td>347227.8</td>
-    <td>9.1 us</td>
-    <td>6.2 us</td>
-    <td>340.0 ns</td>
-    <td>13.9 us</td>
-    <td>22.8 us</td>
-    <td>6.2 ms</td>
-    <td>29_18:29:11</td>
-    <td>6.3</td>
-    <td>11</td>
-    <td>63.5 us</td>
-    <td>6.3 ms</td>
-    <td>0:04:25.0</td>
-    <td>883.4</td>
-    <td>15.8</td>
+    <td>358182.7</td>
+    <td>8.8 us</td>
+    <td>6.0 us</td>
+    <td>391.0 ns</td>
+    <td>8.1 us</td>
+    <td>15.9 us</td>
+    <td>22.0 us</td>
+    <td>5.5 ms</td>
+    <td class="extra-col">22_06:33:30</td>
+    <td class="extra-col">6.3</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">61.4 us</td>
+    <td class="extra-col">5.6 ms</td>
+    <td class="extra-col">0:04:24.3</td>
+    <td class="extra-col">881.3</td>
+    <td class="extra-col">34.4</td>
   </tr>
 
   <tr>
     <td></td>
     <td><a href='benchmark_report/benchmark_report_2_0.html'>[1.FJP:invoke]</a></td>
-    <td><b>31217773</b></td>
+    <td><b>32283074</b></td>
     <td><b>0</b></td>
     <td><b>0:01:30</b></td>
-    <td><b>346864.1</b></td>
-    <td><b>9.1 us</b></td>
+    <td><b>358700.8</b></td>
+    <td><b>8.8 us</b></td>
     <td><b>6.0 us</b></td>
-    <td><b>340.0 ns</b></td>
-    <td><b>13.9 us</b></td>
-    <td><b>22.8 us</b></td>
-    <td><b>6.7 ms</b></td>
-    <td><b>29_18:28:37</b></td>
-    <td><b>6.3</b></td>
-    <td><b>11</b></td>
-    <td><b>63.5 us</b></td>
-    <td><b>6.8 ms</b></td>
-    <td><b>0:13:14.7</b></td>
-    <td><b>883.4</b></td>
-    <td><b>19.3</b></td>
+    <td><b>371.0 ns</b></td>
+    <td><b>8.1 us</b></td>
+    <td><b>15.9 us</b></td>
+    <td><b>22.0 us</b></td>
+    <td><b>6.4 ms</b></td>
+    <td class="extra-col"><b>22_06:32:13</b></td>
+    <td class="extra-col"><b>6.3</b></td>
+    <td class="extra-col"><b>11</b></td>
+    <td class="extra-col"><b>61.4 us</b></td>
+    <td class="extra-col"><b>6.5 ms</b></td>
+    <td class="extra-col"><b>0:13:13.2</b></td>
+    <td class="extra-col"><b>881.4</b></td>
+    <td class="extra-col"><b>34.4</b></td>
   </tr>
 
   <tr>
     <td></td>
     <td><a href='benchmark_report/benchmark_report_2.html'>[Summary]</a></td>
-    <td><b>31217773</b></td>
+    <td><b>32283074</b></td>
     <td><b>0</b></td>
     <td><b>0:01:30</b></td>
-    <td><b>346864.1</b></td>
-    <td><b>9.1 us</b></td>
+    <td><b>358700.8</b></td>
+    <td><b>8.8 us</b></td>
     <td><b>6.0 us</b></td>
-    <td><b>340.0 ns</b></td>
-    <td><b>13.9 us</b></td>
-    <td><b>22.8 us</b></td>
-    <td><b>6.7 ms</b></td>
-    <td><b>29_18:28:37</b></td>
-    <td><b>6.3</b></td>
-    <td><b>11</b></td>
-    <td><b>63.5 us</b></td>
-    <td><b>6.8 ms</b></td>
-    <td><b>0:13:14.7</b></td>
-    <td><b>883.4</b></td>
-    <td><b>19.3</b></td>
+    <td><b>371.0 ns</b></td>
+    <td><b>8.1 us</b></td>
+    <td><b>15.9 us</b></td>
+    <td><b>22.0 us</b></td>
+    <td><b>6.4 ms</b></td>
+    <td class="extra-col"><b>22_06:32:13</b></td>
+    <td class="extra-col"><b>6.3</b></td>
+    <td class="extra-col"><b>11</b></td>
+    <td class="extra-col"><b>61.4 us</b></td>
+    <td class="extra-col"><b>6.5 ms</b></td>
+    <td class="extra-col"><b>0:13:13.2</b></td>
+    <td class="extra-col"><b>881.4</b></td>
+    <td class="extra-col"><b>34.4</b></td>
   </tr>
 
   <tr>
@@ -377,13 +399,14 @@ td:nth-child(n+14) {
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
   </tr>
 
   <tr>
@@ -391,22 +414,23 @@ td:nth-child(n+14) {
     <th>Run Id</th>
     <th>#N</th>
     <th>#F</th>
-    <th>Duration</th>
+    <th>Time</th>
     <th>Aps</th>
     <th>Avg_Rt</th>
     <th>Std_Dev</th>
     <th>Min_Rt</th>
-    <th>p90_Rt</th>
+    <th>p50_Rt</th>
+    <th>p95_Rt</th>
     <th>p99_Rt</th>
     <th>Max_Rt</th>
-    <th>Max_Rtt</th>
-    <th>AQS</th>
-    <th>MQS</th>
-    <th>AWT</th>
-    <th>MWT</th>
-    <th>CPU_T</th>
-    <th>CPU</th>
-    <th>MEM</th>
+    <th class="extra-col">Max_Rtt</th>
+    <th class="extra-col">AQS</th>
+    <th class="extra-col">MQS</th>
+    <th class="extra-col">AWT</th>
+    <th class="extra-col">MWT</th>
+    <th class="extra-col">CPU_T</th>
+    <th class="extra-col">CPU</th>
+    <th class="extra-col">MEM</th>
   </tr>
 
   <tr>
@@ -423,128 +447,134 @@ td:nth-child(n+14) {
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
   </tr>
 
   <tr>
     <td>u:1024, t:4</td>
     <td>1</td>
-    <td>8999995</td>
+    <td>9000002</td>
     <td>0</td>
     <td>0:00:30</td>
-    <td>299999.8</td>
-    <td>6.6 us</td>
-    <td>3.9 us</td>
-    <td>511.0 ns</td>
-    <td>9.5 us</td>
-    <td>16.5 us</td>
-    <td>1.0 ms</td>
-    <td>29_18:30:12</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>43.7 us</td>
+    <td>300000.1</td>
+    <td>6.4 us</td>
+    <td>3.7 us</td>
+    <td>611.0 ns</td>
+    <td>6.1 us</td>
+    <td>10.9 us</td>
+    <td>15.7 us</td>
     <td>1.1 ms</td>
-    <td>0:02:26.1</td>
-    <td>487.2</td>
-    <td>12.2</td>
+    <td class="extra-col">22_06:34:32</td>
+    <td class="extra-col">6.2</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">42.4 us</td>
+    <td class="extra-col">1.2 ms</td>
+    <td class="extra-col">0:02:21.9</td>
+    <td class="extra-col">473.2</td>
+    <td class="extra-col">34.6</td>
   </tr>
 
   <tr>
     <td>c:1</td>
     <td>2</td>
-    <td>8999998</td>
+    <td>8999997</td>
     <td>0</td>
     <td>0:00:30</td>
     <td>299999.9</td>
-    <td>6.6 us</td>
-    <td>4.1 us</td>
-    <td>591.0 ns</td>
-    <td>9.6 us</td>
-    <td>16.5 us</td>
-    <td>4.0 ms</td>
-    <td>29_18:30:37</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>43.8 us</td>
-    <td>4.1 ms</td>
-    <td>0:02:26.4</td>
-    <td>488.2</td>
-    <td>52.7</td>
+    <td>6.4 us</td>
+    <td>3.7 us</td>
+    <td>511.0 ns</td>
+    <td>6.1 us</td>
+    <td>10.9 us</td>
+    <td>15.7 us</td>
+    <td>1.1 ms</td>
+    <td class="extra-col">22_06:34:50</td>
+    <td class="extra-col">6.2</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">42.4 us</td>
+    <td class="extra-col">1.1 ms</td>
+    <td class="extra-col">0:02:21.8</td>
+    <td class="extra-col">472.9</td>
+    <td class="extra-col">15.7</td>
   </tr>
 
   <tr>
     <td></td>
     <td>3</td>
-    <td>9000000</td>
+    <td>9000001</td>
     <td>0</td>
     <td>0:00:30</td>
     <td>300000.0</td>
-    <td>6.6 us</td>
-    <td>3.9 us</td>
-    <td>501.0 ns</td>
-    <td>9.6 us</td>
-    <td>16.5 us</td>
-    <td>1.8 ms</td>
-    <td>29_18:31:04</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>43.8 us</td>
-    <td>1.9 ms</td>
-    <td>0:02:26.6</td>
-    <td>488.7</td>
-    <td>33.7</td>
+    <td>6.4 us</td>
+    <td>4.1 us</td>
+    <td>531.0 ns</td>
+    <td>6.1 us</td>
+    <td>10.8 us</td>
+    <td>15.6 us</td>
+    <td>4.0 ms</td>
+    <td class="extra-col">22_06:35:34</td>
+    <td class="extra-col">6.2</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">42.4 us</td>
+    <td class="extra-col">4.1 ms</td>
+    <td class="extra-col">0:02:21.6</td>
+    <td class="extra-col">472.3</td>
+    <td class="extra-col">56.3</td>
   </tr>
 
   <tr>
     <td></td>
     <td><a href='benchmark_report/benchmark_report_3_0.html'>[1.FJP:invoke]</a></td>
-    <td><b>26999993</b></td>
+    <td><b>27000000</b></td>
     <td><b>0</b></td>
     <td><b>0:01:30</b></td>
-    <td><b>299999.9</b></td>
-    <td><b>6.6 us</b></td>
+    <td><b>300000.0</b></td>
+    <td><b>6.4 us</b></td>
     <td><b>3.9 us</b></td>
-    <td><b>501.0 ns</b></td>
-    <td><b>9.6 us</b></td>
-    <td><b>16.5 us</b></td>
+    <td><b>511.0 ns</b></td>
+    <td><b>6.1 us</b></td>
+    <td><b>10.8 us</b></td>
+    <td><b>15.6 us</b></td>
     <td><b>4.0 ms</b></td>
-    <td><b>29_18:30:37</b></td>
-    <td><b>6.2</b></td>
-    <td><b>11</b></td>
-    <td><b>43.8 us</b></td>
-    <td><b>4.1 ms</b></td>
-    <td><b>0:07:19.2</b></td>
-    <td><b>488.7</b></td>
-    <td><b>52.7</b></td>
+    <td class="extra-col"><b>22_06:35:34</b></td>
+    <td class="extra-col"><b>6.2</b></td>
+    <td class="extra-col"><b>11</b></td>
+    <td class="extra-col"><b>42.4 us</b></td>
+    <td class="extra-col"><b>4.1 ms</b></td>
+    <td class="extra-col"><b>0:07:05.5</b></td>
+    <td class="extra-col"><b>473.2</b></td>
+    <td class="extra-col"><b>56.3</b></td>
   </tr>
 
   <tr>
     <td></td>
     <td><a href='benchmark_report/benchmark_report_3.html'>[Summary]</a></td>
-    <td><b>26999993</b></td>
+    <td><b>27000000</b></td>
     <td><b>0</b></td>
     <td><b>0:01:30</b></td>
-    <td><b>299999.9</b></td>
-    <td><b>6.6 us</b></td>
+    <td><b>300000.0</b></td>
+    <td><b>6.4 us</b></td>
     <td><b>3.9 us</b></td>
-    <td><b>501.0 ns</b></td>
-    <td><b>9.6 us</b></td>
-    <td><b>16.5 us</b></td>
+    <td><b>511.0 ns</b></td>
+    <td><b>6.1 us</b></td>
+    <td><b>10.8 us</b></td>
+    <td><b>15.6 us</b></td>
     <td><b>4.0 ms</b></td>
-    <td><b>29_18:30:37</b></td>
-    <td><b>6.2</b></td>
-    <td><b>11</b></td>
-    <td><b>43.8 us</b></td>
-    <td><b>4.1 ms</b></td>
-    <td><b>0:07:19.2</b></td>
-    <td><b>488.7</b></td>
-    <td><b>52.7</b></td>
+    <td class="extra-col"><b>22_06:35:34</b></td>
+    <td class="extra-col"><b>6.2</b></td>
+    <td class="extra-col"><b>11</b></td>
+    <td class="extra-col"><b>42.4 us</b></td>
+    <td class="extra-col"><b>4.1 ms</b></td>
+    <td class="extra-col"><b>0:07:05.5</b></td>
+    <td class="extra-col"><b>473.2</b></td>
+    <td class="extra-col"><b>56.3</b></td>
   </tr>
 
   <tr>
@@ -561,13 +591,14 @@ td:nth-child(n+14) {
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
+    <td class="extra-col">&nbsp;</td>
   </tr>
 
   <tr>
@@ -575,22 +606,23 @@ td:nth-child(n+14) {
     <th>Run Id</th>
     <th>#N</th>
     <th>#F</th>
-    <th>Duration</th>
+    <th>Time</th>
     <th>Aps</th>
     <th>Avg_Rt</th>
     <th>Std_Dev</th>
     <th>Min_Rt</th>
-    <th>p90_Rt</th>
+    <th>p50_Rt</th>
+    <th>p95_Rt</th>
     <th>p99_Rt</th>
     <th>Max_Rt</th>
-    <th>Max_Rtt</th>
-    <th>AQS</th>
-    <th>MQS</th>
-    <th>AWT</th>
-    <th>MWT</th>
-    <th>CPU_T</th>
-    <th>CPU</th>
-    <th>MEM</th>
+    <th class="extra-col">Max_Rtt</th>
+    <th class="extra-col">AQS</th>
+    <th class="extra-col">MQS</th>
+    <th class="extra-col">AWT</th>
+    <th class="extra-col">MWT</th>
+    <th class="extra-col">CPU_T</th>
+    <th class="extra-col">CPU</th>
+    <th class="extra-col">MEM</th>
   </tr>
 
   <tr>
@@ -607,130 +639,154 @@ td:nth-child(n+14) {
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
+    <td class="extra-col"></td>
   </tr>
 
   <tr>
     <td>u:1024, t:4</td>
     <td>1</td>
-    <td>14191209</td>
+    <td>14587185</td>
     <td>0</td>
     <td>0:00:30</td>
-    <td>473040.3</td>
-    <td>6.6 us</td>
-    <td>3.3 us</td>
-    <td>521.0 ns</td>
-    <td>9.2 us</td>
-    <td>13.8 us</td>
-    <td>2.5 ms</td>
-    <td>29_18:32:37</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>45.3 us</td>
-    <td>2.6 ms</td>
-    <td>0:03:47.5</td>
-    <td>758.6</td>
-    <td>49.0</td>
+    <td>486239.5</td>
+    <td>6.4 us</td>
+    <td>3.2 us</td>
+    <td>621.0 ns</td>
+    <td>6.4 us</td>
+    <td>9.8 us</td>
+    <td>13.4 us</td>
+    <td>1.1 ms</td>
+    <td class="extra-col">22_06:36:26</td>
+    <td class="extra-col">6.2</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">44.2 us</td>
+    <td class="extra-col">1.2 ms</td>
+    <td class="extra-col">0:03:48.4</td>
+    <td class="extra-col">761.5</td>
+    <td class="extra-col">21.8</td>
   </tr>
 
   <tr>
     <td>c:1</td>
     <td>2</td>
-    <td>14185751</td>
+    <td>14546053</td>
     <td>0</td>
     <td>0:00:30</td>
-    <td>472858.4</td>
-    <td>6.6 us</td>
-    <td>3.8 us</td>
-    <td>581.0 ns</td>
-    <td>9.2 us</td>
-    <td>13.9 us</td>
-    <td>4.7 ms</td>
-    <td>29_18:32:56</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>45.4 us</td>
-    <td>4.8 ms</td>
-    <td>0:03:47.8</td>
-    <td>759.6</td>
-    <td>29.5</td>
+    <td>484868.4</td>
+    <td>6.5 us</td>
+    <td>4.0 us</td>
+    <td>561.0 ns</td>
+    <td>6.4 us</td>
+    <td>9.8 us</td>
+    <td>13.5 us</td>
+    <td>5.1 ms</td>
+    <td class="extra-col">22_06:36:58</td>
+    <td class="extra-col">6.2</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">44.3 us</td>
+    <td class="extra-col">5.2 ms</td>
+    <td class="extra-col">0:03:48.4</td>
+    <td class="extra-col">761.4</td>
+    <td class="extra-col">6.0</td>
   </tr>
 
   <tr>
     <td></td>
     <td>3</td>
-    <td>14214813</td>
+    <td>14528610</td>
     <td>0</td>
     <td>0:00:30</td>
-    <td>473827.1</td>
-    <td>6.6 us</td>
-    <td>3.2 us</td>
-    <td>551.0 ns</td>
-    <td>9.2 us</td>
-    <td>13.9 us</td>
-    <td>846.7 us</td>
-    <td>29_18:33:18</td>
-    <td>6.2</td>
-    <td>11</td>
-    <td>45.3 us</td>
-    <td>1.0 ms</td>
-    <td>0:03:48.3</td>
-    <td>761.1</td>
-    <td>9.7</td>
+    <td>484287.0</td>
+    <td>6.5 us</td>
+    <td>3.1 us</td>
+    <td>611.0 ns</td>
+    <td>6.4 us</td>
+    <td>9.8 us</td>
+    <td>13.5 us</td>
+    <td>821.3 us</td>
+    <td class="extra-col">22_06:37:31</td>
+    <td class="extra-col">6.2</td>
+    <td class="extra-col">11</td>
+    <td class="extra-col">44.3 us</td>
+    <td class="extra-col">1.0 ms</td>
+    <td class="extra-col">0:03:48.3</td>
+    <td class="extra-col">761.0</td>
+    <td class="extra-col">49.7</td>
   </tr>
 
   <tr>
     <td></td>
     <td><a href='benchmark_report/benchmark_report_4_0.html'>[1.FJP:invoke]</a></td>
-    <td><b>42591773</b></td>
+    <td><b>43661848</b></td>
     <td><b>0</b></td>
     <td><b>0:01:30</b></td>
-    <td><b>473241.9</b></td>
-    <td><b>6.6 us</b></td>
-    <td><b>3.5 us</b></td>
-    <td><b>521.0 ns</b></td>
-    <td><b>9.2 us</b></td>
-    <td><b>13.8 us</b></td>
-    <td><b>4.7 ms</b></td>
-    <td><b>29_18:32:56</b></td>
-    <td><b>6.2</b></td>
-    <td><b>11</b></td>
-    <td><b>45.4 us</b></td>
-    <td><b>4.8 ms</b></td>
-    <td><b>0:11:23.8</b></td>
-    <td><b>761.1</b></td>
-    <td><b>49.0</b></td>
+    <td><b>485131.6</b></td>
+    <td><b>6.4 us</b></td>
+    <td><b>3.4 us</b></td>
+    <td><b>561.0 ns</b></td>
+    <td><b>6.4 us</b></td>
+    <td><b>9.8 us</b></td>
+    <td><b>13.5 us</b></td>
+    <td><b>5.1 ms</b></td>
+    <td class="extra-col"><b>22_06:36:58</b></td>
+    <td class="extra-col"><b>6.2</b></td>
+    <td class="extra-col"><b>11</b></td>
+    <td class="extra-col"><b>44.3 us</b></td>
+    <td class="extra-col"><b>5.2 ms</b></td>
+    <td class="extra-col"><b>0:11:25.1</b></td>
+    <td class="extra-col"><b>761.5</b></td>
+    <td class="extra-col"><b>49.7</b></td>
   </tr>
 
   <tr>
     <td></td>
     <td><a href='benchmark_report/benchmark_report_4.html'>[Summary]</a></td>
-    <td><b>42591773</b></td>
+    <td><b>43661848</b></td>
     <td><b>0</b></td>
     <td><b>0:01:30</b></td>
-    <td><b>473241.9</b></td>
-    <td><b>6.6 us</b></td>
-    <td><b>3.5 us</b></td>
-    <td><b>521.0 ns</b></td>
-    <td><b>9.2 us</b></td>
-    <td><b>13.8 us</b></td>
-    <td><b>4.7 ms</b></td>
-    <td><b>29_18:32:56</b></td>
-    <td><b>6.2</b></td>
-    <td><b>11</b></td>
-    <td><b>45.4 us</b></td>
-    <td><b>4.8 ms</b></td>
-    <td><b>0:11:23.8</b></td>
-    <td><b>761.1</b></td>
-    <td><b>49.0</b></td>
+    <td><b>485131.6</b></td>
+    <td><b>6.4 us</b></td>
+    <td><b>3.4 us</b></td>
+    <td><b>561.0 ns</b></td>
+    <td><b>6.4 us</b></td>
+    <td><b>9.8 us</b></td>
+    <td><b>13.5 us</b></td>
+    <td><b>5.1 ms</b></td>
+    <td class="extra-col"><b>22_06:36:58</b></td>
+    <td class="extra-col"><b>6.2</b></td>
+    <td class="extra-col"><b>11</b></td>
+    <td class="extra-col"><b>44.3 us</b></td>
+    <td class="extra-col"><b>5.2 ms</b></td>
+    <td class="extra-col"><b>0:11:25.1</b></td>
+    <td class="extra-col"><b>761.5</b></td>
+    <td class="extra-col"><b>49.7</b></td>
   </tr>
 
 </table>
+
+    <script>
+        const btn = document.getElementById('toggleBtn');
+        const table = document.getElementById('dataTable');
+
+        btn.addEventListener('click', () => {
+            // Toggle the CSS class
+            table.classList.toggle('expanded');
+            
+            // Toggle the button text
+            if (table.classList.contains('expanded')) {
+                btn.textContent = 'Hide Detailed Columns';
+            } else {
+                btn.textContent = 'Show All Columns';
+            }
+        });
+    </script>
+    
 </body>
 </html>
