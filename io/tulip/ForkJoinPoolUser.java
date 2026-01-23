@@ -25,10 +25,6 @@ public class ForkJoinPoolUser extends TulipUser {
     // private data per user
     // DoubleNumber doubleNumberTask;
 
-    public ForkJoinPoolUser(int userId, int threadId) {
-        super(userId, threadId);
-    }
-
     public boolean onStart() {
         // Initialize the shared ForkJoinPool object
         if (getUserId() == 0) {
