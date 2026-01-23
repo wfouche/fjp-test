@@ -269,7 +269,7 @@ Filename::
 == JVM System Properties
 
 * java.vendor: Eclipse Adoptium
-* java.version: 25.0.1
+* java.version: 25.0.2
 * os.name: Linux
 * os.arch: amd64
 
