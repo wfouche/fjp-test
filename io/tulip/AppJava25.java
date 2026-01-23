@@ -1,5 +1,6 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //SOURCES App.java ForkJoinPoolUser.java
+//RUNTIME_OPTIONS -XX:+UseCompactObjectHeaders
 //JAVA 25
 
 package io.tulip;
