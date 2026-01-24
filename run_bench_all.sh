@@ -27,6 +27,7 @@ sdk use     java 24.0.2-tem
 
 sdk install java 25.0.2-tem
 sdk use     java 25.0.2-tem
+
 ./run_bench_25.sh
 
 sdk install java 26.ea.31-open
