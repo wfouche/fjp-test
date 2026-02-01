@@ -9,6 +9,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 rm -f -r app.log benchmark_report* benchmark_output.json benchmark_config.adoc benchmark_config.html
 
+export JBANG_APP_JAVA_OPTIONS="-Djdk.virtualThreadScheduler.parallelism=4"
+
 set_title "Java 21"
 echo "n" | sdk install java 21.0.9-tem
 sdk use     java 21.0.9-tem
