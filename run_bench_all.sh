@@ -9,12 +9,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 rm -f -r app.log benchmark_report* benchmark_output.json benchmark_config.adoc benchmark_config.html
 
-#set_title "Java 17"
-#echo "n" | sdk install java 17.0.18-tem
-#sdk use     java 17.0.18-tem 
-
-#./run_bench_17.sh
-
 set_title "Java 21"
 echo "n" | sdk install java 21.0.9-tem
 sdk use     java 21.0.9-tem
