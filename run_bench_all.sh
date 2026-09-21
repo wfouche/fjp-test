@@ -30,15 +30,21 @@ sdk use     java 24.0.2-tem
 ./run_bench_24.sh
 
 set_title "Java 25"
-echo "n" | sdk install java 25.0.2-tem
-sdk use     java 25.0.2-tem
+echo "n" | sdk install java 25.0.4-tem
+sdk use     java 25.0.4-tem
 
 ./run_bench_25.sh
 
 set_title "Java 26"
-echo "n" | sdk install java 26.ea.31-open
-sdk use     java 26.ea.31-open
+echo "n" | sdk install java 26.0.2-amzn
+sdk use     java 26.0.2-amzn
 
 ./run_bench_26.sh
+
+set_title "Java 27"
+echo "n" | sdk install java 27.0.0-amzn
+sdk use     java 27.0.0-amzn
+
+./run_bench_27.sh
 
 rm -f -r app.log benchmark_report* benchmark_output.json benchmark_config.adoc benchmark_config.html
