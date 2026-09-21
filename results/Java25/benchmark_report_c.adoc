@@ -111,19 +111,6 @@
 ! 1
 ! - 
 !===
-| *time* 
-| 
-[%noheader,cols="2a,1a"]
-!===
-! *warmup_duration1*
-! 30 seconds
-! *warmup_duration2*
-! 10 seconds
-! *benchmark_duration*
-! 30 seconds
-! *benchmark_iterations*
-! 3
-!===
 |===
 
 === FJP.b
@@ -140,19 +127,6 @@
 ! id ! weight 
 ! 1
 ! - 
-!===
-| *time* 
-| 
-[%noheader,cols="2a,1a"]
-!===
-! *warmup_duration1*
-! 30 seconds
-! *warmup_duration2*
-! 10 seconds
-! *benchmark_duration*
-! 30 seconds
-! *benchmark_iterations*
-! 3
 !===
 |===
 
@@ -218,31 +192,27 @@
             ]
         }, 
         "FJP.a": {
-            "time": {
-                "warmup_duration1": 30, 
-                "warmup_duration2": 10, 
-                "benchmark_duration": 30, 
-                "benchmark_iterations": 3
-            }, 
             "aps_rate": 300000.0, 
             "scenario_actions": [
                 {
                     "id": 1
                 }
-            ]
+            ], 
+            "warmup_duration1": 30, 
+            "warmup_duration2": 10, 
+            "benchmark_duration": 30, 
+            "benchmark_iterations": 3
         }, 
         "FJP.b": {
-            "time": {
-                "warmup_duration1": 30, 
-                "warmup_duration2": 10, 
-                "benchmark_duration": 30, 
-                "benchmark_iterations": 3
-            }, 
             "scenario_actions": [
                 {
                     "id": 1
                 }
-            ]
+            ], 
+            "warmup_duration1": 30, 
+            "warmup_duration2": 10, 
+            "benchmark_duration": 30, 
+            "benchmark_iterations": 3
         }, 
         "onStop": {
             "save_stats": false, 
@@ -259,14 +229,15 @@
 == JVM System Properties
 
 * java.vendor: Eclipse Adoptium
-* java.version: 25.0.2
-* java.runtime.version: 25.0.2+10-LTS
+* java.version: 25.0.4
+* java.runtime.version: 25.0.4+7-LTS
 * os.name: Linux
 * os.arch: amd64
 
 == JVM Runtime Options
 
 * Option 1: -XX:+UseCompactObjectHeaders
-* Option 2: -Xms2g
-* Option 3: -Xmx2g
-* Option 4: -XX:+UseG1GC
+* Option 2: -Djdk.virtualThreadScheduler.parallelism=4
+* Option 3: -Xms2g
+* Option 4: -Xmx2g
+* Option 5: -XX:+UseG1GC

@@ -23,12 +23,10 @@
     "FJP.a": {
       "enabled": true,
       "aps_rate": 300000.0,
-      "time": {
         "warmup_duration1": 30,
         "warmup_duration2": 10,
         "benchmark_duration": 30,
-        "benchmark_iterations": 3
-      },
+        "benchmark_iterations": 3,
       "scenario_actions": [
         {
           "id": 1
@@ -38,12 +36,10 @@
     "FJP.b": {
       "enabled": true,
       "aps_rate": 0.0,
-      "time": {
         "warmup_duration1": 30,
         "warmup_duration2": 10,
         "benchmark_duration": 30,
-        "benchmark_iterations": 3
-      },
+        "benchmark_iterations": 3,
       "scenario_actions": [
         {
           "id": 1

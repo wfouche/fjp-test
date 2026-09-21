@@ -12,22 +12,10 @@ rm -f -r app.log benchmark_report* benchmark_output.json benchmark_config.adoc b
 export JBANG_APP_JAVA_OPTIONS="-Djdk.virtualThreadScheduler.parallelism=4"
 
 set_title "Java 21"
-echo "n" | sdk install java 21.0.9-tem
+echo "n" | sdk install java 21.0.12-amzn
 sdk use     java 21.0.9-tem
 
 ./run_bench_21.sh
-
-set_title "Java 23"
-echo "n" | sdk install java 23.0.2-tem
-sdk use     java 23.0.2-tem  
-
-./run_bench_23.sh
-
-set_title "Java 24"
-echo "n" | sdk install java 24.0.2-tem
-sdk use     java 24.0.2-tem 
-
-./run_bench_24.sh
 
 set_title "Java 25"
 echo "n" | sdk install java 25.0.4-tem
