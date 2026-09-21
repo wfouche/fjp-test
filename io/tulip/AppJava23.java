@@ -4,7 +4,7 @@
 
 package io.tulip;
 
-import io.github.wfouche.tulip.api.TulipApi;
+import io.github.tulipltt.tulip.api.TulipApi;
 
 public class AppJava23 {
    public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package io.tulip;
 
-import io.github.wfouche.tulip.api.TulipUser;
+import io.github.tulipltt.tulip.api.TulipUser;
 import java.util.concurrent.ThreadLocalRandom;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

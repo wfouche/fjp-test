@@ -1,5 +1,5 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS io.github.wfouche.tulip:tulip-runtime:2.2.0
+//DEPS io.github.tulipltt:tulip-runtime:2.3.7
 //SOURCES ForkJoinPoolUser.java
 //RUNTIME_OPTIONS -Xms2g -Xmx2g -XX:+UseG1GC
 //FILES ../../benchmark_config.json
